@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NETMauiApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30">
+
+            <Label 
+                Text="Welcome to .NAPI App"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+                <RadioButton Content="GET" IsChecked="true"/>
+                <RadioButton Content="POST" />
+                <RadioButton Content="PUT" />
+                <RadioButton Content="DELETE"/>
+            </StackLayout>
+
+            <Entry x:Name="entry"
+               Text="https://"
+               CursorPosition="8" 
+               Placeholder="Enter Endpoint"/>
+
+            <Button 
+                Text="SEND"
+                Clicked="OnCounterClicked"
+                FontSize="Default"
+                FontAttributes="Bold"
+                SemanticProperties.Hint="Get Response From Your Endpoint"
+                HorizontalOptions="Center" />
+
+            <Frame
+                BorderColor="#2d0c98"
+                Padding="10,15,10,15"
+                Margin="0,0,0,0"
+                >
+                <StackLayout>
+                    <Label 
+                Text="Response"
+                FontSize="10"
+                FontAttributes="None"
+                x:Name="CounterLabel"
+                HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
